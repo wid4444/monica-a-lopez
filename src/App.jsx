@@ -1,33 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './Components/Header'
+import Home from './Sections/Home'
+import About from './Sections/About'
+import Work from './Sections/Work'
+import Contact from './Sections/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='app-container'>
+         {/* <Sidenav currentSection={currentSection} /> */}
+      <Header id="header"/>
+      <Home id="home" />
+      <About id="about" />
+      <Work id="work" />
+      <Contact id="contact" />
+      {/* <Bio id="bio" />
+      <Work id="work" />
+      <Projects id="projects" />
+      <ContactForm id="contact" /> */}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> Lets get started
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
