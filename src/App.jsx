@@ -4,6 +4,7 @@ import Home from './Sections/Home'
 import About from './Sections/About'
 import Work from './Sections/Work'
 import Contact from './Sections/Contact'
+import SideBar from './Components/SideBar'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
       <div className='app-container'>
-         {/* <Sidenav currentSection={currentSection} /> */}
+         {/* <SideBar currentSection={currentSection} /> */}
       <Header id="header"/>
       <Home id="home" />
       <About id="about" />

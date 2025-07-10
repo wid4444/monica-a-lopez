@@ -1,22 +1,121 @@
-.sidebar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100vh;
-    width: 5vw;
-    background-color: #08d1f4;
-}
-.header {
+.menu-icon {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 99;
+    color: rgb(234, 4, 250);
+    cursor: pointer;
+    display: none;
+  }
+  
+  .nav-menu {
     position: fixed;
-    right: 0;
-    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: center;
-    /* height: 80vh; */
-    width: 10vw;
+    align-items: center;
+    z-index: 20;
+  }
+  
+  .nav-link {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #001b5e;
+    color: white;
+    margin: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    transform: scale(1.1);
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    z-index: 10;
 
-    /* background-color: #f47a08; */
-}
+    /* border: #a605fc 2px solid; */
+  }
+
+  .rotated-text {
+    transform: rotate(270deg); /* Rotates the text 90 degrees */
+    display: inline-block; /* Ensures the transform property works correctly */
+  }
+  
+  .icon {
+    /* margin: 10px; */
+    /* padding: auto; */
+    /* position: relative; */
+    /* height: auto; */
+    /* width: 60px; */
+    /* border-radius: 50%; */
+    /* background-color: #001b5e; */
+    /* border: white 2px solid; */
+    
+    color: #ea02fa;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+
+  .highlight {
+    color: #a605fc;
+    font-family: "Alex Brush", cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    /* padding: 30px; */
+    border-right: #03fafe 2px solid;
+  }
+
+  
+
+  .span-home {
+    color: white;
+  }
+  
+  .span-about {
+    color: blue;
+  }
+  
+  .span-work {
+    color: green;
+  }
+  
+  .span-contact {
+    color: red;
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+    .sidebar {
+      display: none;
+    }
+    
+  }

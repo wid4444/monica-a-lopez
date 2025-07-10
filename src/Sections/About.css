@@ -3,8 +3,103 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     color: black;
     background-color: #08f40c;
+    background-image: url('../assets/about-background-d.png') ; 
+    background-size: cover; 
+    background-position: center; 
+}
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    margin: 5rem;
+    /* padding: 2rem; */
+    /* border-radius: 10px; */
+    /* background-color: white; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    /* margin: 5rem; */
+    /* padding: 2rem; */
+    /* border-radius: 10px; */
+    /* background-color: white; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.title {
+    font-size: 8rem;
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.bio-img {
+    width: 400px;
+    /* height: 200px; */
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+.about-es .about-en {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+/* .about-en {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+} */
+@media (max-width: 768px) {
+    .about-container {
+        background-image: url('../assets/about-background-c.png'); 
+        position: absolute;
+    /* height: auto; */
+
+    }
+    .about-container {
+        padding-top: 2rem; /* Add padding to the top of the about section */
+        position: relative; /* Ensure the about section is positioned relative to avoid overlap */
+    }
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;
+        justify-content: space-around;
+        width: 80vw; */
+        /* margin: 5rem; */
+        /* padding: 2rem; */
+        /* border-radius: 10px; */
+        /* background-color: white; */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    }
+    .title {
+        font-size: 4rem;
+        font-family: "Alex Brush", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .bio-img {
+        width: 300px;
+        /* height: 200px; */
+        /* border-radius: 20px;
+        margin-bottom: 1rem; */
+    }
+    .about-es, .about-en {
+        font-size: .8rem;
+        font-weight: normal;
+        margin-bottom: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
 }
