@@ -88,6 +88,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    max-width: 1200px;
+  margin: 0 auto;
   }
 
   .main-image {
@@ -95,34 +98,84 @@
 top: 5px;
 
     border: chocolate solid 2px;
-    width: auto;
-  height: auto;
+    /* width: 80vw; */
+  /* height: auto; */
   max-height: 68vh;
   border-radius: 12px;
-  object-fit: cover;
+  /* object-fit: cover; */
+
+  width: 80vw;         /* stretch to the wrapper’s width */
+  height: auto;        /* keep aspect-ratio */
+  object-fit: contain; /* show full picture, no cropping */
+  display: block;
+  }
+
+  .gallery-wrapper {
+    width: 95vw;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   }
 
   .gallery-container {
-    /* position: fixed;
-    bottom: 30px;
-    left: 0; */
-    border: #f408d9 solid 2px;
-    width: 95vw;
-    /* height: 20vh; */
+    /* width: 95vw; */
+    display: flex;
+    /* justify-content: center; */
+    padding: 10px;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    scroll-snap-type: x mandatory; /* Optional */
+  -webkit-overflow-scrolling: touch;
+  transition: justify-content 0.8s ease;
+/* position: relative; */
+    /* display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  scroll-behavior: smooth; */
+  }
+
+  .gallery-container::after {
+    content: '';
+    /* flex: 0 0 auto; */
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    overflow-y: hidden;
+    width: 100%;
   }
-  .gallery-img {
-    width: 8%;             /* Try 10–25% */
-  aspect-ratio: 4 / 3;    /* Keeps shape consistent */
-  border-radius: 10px;
-  object-fit: cover;
 
+  .gallery-img {
+    /* width: 8%;            
+  aspect-ratio: 4 / 3;    Keeps shape consistent 
+  border-radius: 10px;
+  object-fit: cover; */
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+
+  flex: 0 0 auto; /* Prevent shrinking */
  
   }
+  .gallery-img.active {
+    outline: 3px solid #ff6700;
+    opacity: 0.8;
+  }
+
+  /* Optional: style the button container */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  color: #f408d9; /* Change to your desired color */
+  font-weight: 600;
+  
+}
   
   @media (max-width: 768px) {
     .modal {
