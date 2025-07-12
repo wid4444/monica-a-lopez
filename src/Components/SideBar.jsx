@@ -73,7 +73,7 @@ const SideBar = () => {
           size={40}
         />
       ) : (
-        <IoMenu onClick={handleNav} className="menu-icon menu" size={45} />
+        <IoMenu onClick={handleNav} className="menu-icon" size={45} />
       )}
 
       {nav && (

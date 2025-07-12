@@ -106,19 +106,22 @@
     color: #555;
   }
 
-  /* serume btn */
+  /* resume btn */
 
   .resume-btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
-    font-family: 'Caveat', cursive; /* Optional: use a fun Google Font */
-    background: linear-gradient(135deg, #ff66b2, #a56cfd);
+    font-family: 'Caveat', cursive;
+    background: linear-gradient(135deg, #ff66b2, #6394f5);
     color: white;
     text-decoration: none;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.6), /* highlight on top */
+      0 6px 0 #a04acc,                         /* "base" layer for 3D effect */
+      0 8px 20px rgba(0, 0, 0, 0.25);         /* outer glow */
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -141,8 +144,20 @@
   }
   
   .resume-btn:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    color: #7c34b5;
+    transform: translateY(-4px);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.6),
+      0 12px 0 #8c40c2,
+      0 12px 25px rgba(0, 0, 0, 0.35);
+  }
+  
+  .resume-btn:active {
+    transform: translateY(2px);
+    box-shadow:
+      inset 0 2px 3px rgba(0, 0, 0, 0.4),
+      0 4px 0 #7c34b5,
+      0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
 
