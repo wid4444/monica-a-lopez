@@ -1,20 +1,26 @@
 import "./Work.css";
 import Modal from "./Modal";
 
-import acrylics4 from "../assets/acrylics/4.jpg";
-import wood1 from "../assets/wood/1.jpg";
-// import video1 from "../assets/aluminio/video1.mp4";
+import pic1 from "../assets/pic/1.jpeg";
+import pic2 from "../assets/pic/2.jpeg";
+import pic3 from "../assets/pic/3.jpeg";
+import pic4 from "../assets/pic/4.jpeg";
+import pic5 from "../assets/pic/5.jpeg";
+import pic6 from "../assets/pic/6.jpeg";
+import pic7 from "../assets/pic/7.jpeg";
+import pic8 from "../assets/pic/8.jpeg";
+
 
 const Work = () => {
   const images = [
-    acrylics4,
-    wood1,
-    acrylics4,
-    acrylics4,
-    acrylics4,
-    acrylics4,
-    acrylics4,
-    acrylics4,
+    pic1,
+    pic2,
+    pic3,
+    pic4,
+    pic5,
+    pic6,
+    pic7,
+    pic8,
   ];
 
   return (

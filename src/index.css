@@ -14,19 +14,16 @@
 
   scroll-padding-top: 100px;
 
-  /* --swiper-theme-color: #646cff; */
-  --swiper-navigation-size: 44px;
-  --swiper-navigation-color: purple;
-  --swiper-pagination-bold: 9px;
-  /* --swiper-pagination-bullet-inactive-color: red;
-  --swiper-pagination-bullet-inactive-opacity: 0.4;
-  --swiper-pagination-bullet-horizontal-gap: 8px; */
-  --swiper-pagination-bullet-size: 10px;
-  /* --swiper-pagination-bullet-active-size: 12px; */
+
+  --swiper-navigation-size: 20px;
+  --swiper-pagination-bullet-inactive-color: rgb(176, 67, 243);
+  --swiper-pagination-color: #f408d9;
+  --swiper-pagination-bullet-width: 11px;
+  --swiper-pagination-bullet-height: 11px;
+  --swiper-pagination-bullet-inactive-width: 10px;
+  --swiper-pagination-bullet-inactive-opacity: 0.3;
+  --swiper-pagination-bullet-inactive-size: 12px;
   --swiper-pagination-bullet-horizontal-gap: 8px;
-  /* --swiper-pagination-bullet-inactive-color: #999;
-  --swiper-pagination-bullet-inactive-opacity: 0.4;
-  --swiper-pagination-bullet-active-color: red; */
 }
 
 a {

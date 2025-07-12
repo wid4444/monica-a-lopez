@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Modal.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,7 +38,7 @@ import mural28 from "../assets/murals/28.jpg";
 import mural29 from "../assets/murals/29.jpg";
 
 import acrilycs1 from "../assets/acrylics/1.jpg";
-import acrilycs2 from "../assets/acrylics/2.jpg";   
+import acrilycs2 from "../assets/acrylics/2.jpg";
 import acrilycs3 from "../assets/acrylics/3.jpg";
 import acrilycs4 from "../assets/acrylics/4.jpg";
 import acrilycs5 from "../assets/acrylics/5.jpg";
@@ -59,7 +59,8 @@ import teaching2 from "../assets/teaching/2.jpg";
 import teaching3 from "../assets/teaching/3.jpg";
 import teaching4 from "../assets/teaching/4.jpg";
 
-// import cultural1 from "../assets/cultural/1.jpg";
+import cultural1 from "../assets/cultural/1.jpg";
+import cultural2 from "../assets/cultural/2.jpg";
 
 import aluminio1 from "../assets/aluminio/1.jpg";
 import aluminio2 from "../assets/aluminio/2.jpg";
@@ -94,30 +95,14 @@ import wood5 from "../assets/wood/5.jpg";
 import wood6 from "../assets/wood/6.jpg";
 import wood7 from "../assets/wood/7.jpg";
 
-
-
-
 function Modal() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeGallery, setActiveGallery] = useState("murals");
   const [currentSlide, setCurrentSlide] = useState(0);
   const swiperRef = useRef(null); // ⬅️ Get reference to Swiper instance
   const thumbnailRefs = useRef([]);
-  
 
-
-//   const handleThumbClick = (index) => {
-//     setCurrentSlide(index);        // update state
-//   };
-
-//   const handleThumbClick = (index) => {
-//     setCurrentSlide(index);
-//     if (swiperRef.current) {
-//       swiperRef.current.slideTo(index); // ⬅️ Tell Swiper to go to selected slide
-//     }
-//   };
-
-const handleThumbClick = (index) => {
+  const handleThumbClick = (index) => {
     swiperRef.current?.slideTo(index);
     thumbnailRefs.current[index]?.scrollIntoView({
       behavior: "smooth",
@@ -126,20 +111,97 @@ const handleThumbClick = (index) => {
     });
   };
 
-  
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);               // depend on isOpen
 
-  const galleryImages = {
-    murals:                   [mural1, mural2, mural3, mural4, mural5, mural6, mural7, mural8, mural9, mural10, mural11, mural12, mural13, mural14, mural15, mural16, mural17, mural18, mural19, mural20, mural21, mural22, mural23, mural24, mural25, mural26, mural27, mural28, mural29],
-    'acrylics and mix media': [acrilycs1, acrilycs2, acrilycs3, acrilycs4, acrilycs5, acrilycs6, acrilycs7, acrilycs8, acrilycs9, acrilycs10, acrilycs11, acrilycs12, acrilycs13, acrilycs14, acrilycs15, acrilycs16],
-    'art instructor':         [teaching1, teaching2, teaching3, teaching4],
-    'cultural makeup':        [],
-    'embossing aluminum':     [aluminio1, aluminio2, aluminio3, aluminio4, aluminio5, aluminio6, aluminio7, aluminio8, aluminio9, aluminio10, aluminio11, aluminio12, aluminio13, aluminio14, aluminio15, aluminio16, aluminio17, aluminio18],
-    prints:                   [prints1, prints2, prints3, prints4, prints5],
-    wood:                     [wood1, wood2, wood3, wood4, wood5, wood6, wood7],
-  // Add more galleries as needed
+  const closeModal = () => {
+    setIsOpen(false);
+    onClose();   // <-- there's no onClose prop; this throws
   };
 
 
+  const galleryImages = {
+    murals: [
+      mural1,
+      mural2,
+      mural3,
+      mural4,
+      mural5,
+      mural6,
+      mural7,
+      mural8,
+      mural9,
+      mural10,
+      mural11,
+      mural12,
+      mural13,
+      mural14,
+      mural15,
+      mural16,
+      mural17,
+      mural18,
+      mural19,
+      mural20,
+      mural21,
+      mural22,
+      mural23,
+      mural24,
+      mural25,
+      mural26,
+      mural27,
+      mural28,
+      mural29,
+    ],
+    "acrylics and mix media": [
+      acrilycs1,
+      acrilycs2,
+      acrilycs3,
+      acrilycs4,
+      acrilycs5,
+      acrilycs6,
+      acrilycs7,
+      acrilycs8,
+      acrilycs9,
+      acrilycs10,
+      acrilycs11,
+      acrilycs12,
+      acrilycs13,
+      acrilycs14,
+      acrilycs15,
+      acrilycs16,
+    ],
+    "art instructor": [teaching1, teaching2, teaching3, teaching4],
+    "cultural makeup": [cultural1, cultural2],
+    "embossing aluminum": [
+      aluminio1,
+      aluminio2,
+      aluminio3,
+      aluminio4,
+      aluminio5,
+      aluminio6,
+      aluminio7,
+      aluminio8,
+      aluminio9,
+      aluminio10,
+      aluminio11,
+      aluminio12,
+      aluminio13,
+      aluminio14,
+      aluminio15,
+      aluminio16,
+      aluminio17,
+      aluminio18,
+    ],
+    prints: [prints1, prints2, prints3, prints4, prints5],
+    wood: [wood1, wood2, wood3, wood4, wood5, wood6, wood7],
+    // Add more galleries as needed
+  };
 
   return (
     <div className="modal-container">
@@ -151,72 +213,79 @@ const handleThumbClick = (index) => {
         <div className="modal-overlay" onClick={() => setIsOpen(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <button className="close-btn" onClick={() => setIsOpen(false)}>
-              X
+              
             </button>
             <div className="tabs-container">
-            <div className="tabs">
-              {["murals", "acrylics and mix media", "art instructor", "cultural makeup", "embossing aluminum", "prints", "wood"].map((section) => (
-                <button
-                  key={section}
-                  className={`tab-btn ${
-                    activeGallery === section ? "active" : ""
-                  }`}
-                  onClick={() => setActiveGallery(section)}
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </button>
-              ))}
-            </div>
+              <div className="tabs">
+                {[
+                  "murals",
+                  "acrylics and mix media",
+                  "art instructor",
+                  "cultural makeup",
+                  "embossing aluminum",
+                  "prints",
+                  "wood",
+                ].map((section) => (
+                  <button
+                    key={section}
+                    className={`tab-btn ${
+                      activeGallery === section ? "active" : ""
+                    }`}
+                    onClick={() => setActiveGallery(section)}
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </button>
+                ))}
+              </div>
             </div>
 
             <Swiper
-        modules={[Navigation, Pagination]}
-        navigation
-        pagination={{ clickable: true }}
-        spaceBetween={20}
-        slidesPerView={1}
-        onSwiper={(swiper) => (swiperRef.current = swiper)} // ⬅️ Assign swiper instance to ref
-        // onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
-        onSlideChange={(swiper) => {
-            setCurrentSlide(swiper.activeIndex);
-            thumbnailRefs.current[swiper.activeIndex]?.scrollIntoView({
-              behavior: "smooth",
-              block: "nearest",
-              inline: "center",
-            });
-          }}
-        style={{ width: "100%", height: "auto" }}
-      >
-        {galleryImages[activeGallery].map((src, index) => (
-          <SwiperSlide key={index}>
-            <div className="main-image-container">
-              <img
-                src={src}
-                alt={`${activeGallery} ${index}`}
-                className="main-image"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+              modules={[Navigation, Pagination]}
+              navigation
+              pagination={{ clickable: true }}
+              spaceBetween={20}
+              slidesPerView={1}
+              onSwiper={(swiper) => (swiperRef.current = swiper)} // ⬅️ Assign swiper instance to ref
+              onSlideChange={(swiper) => {
+                setCurrentSlide(swiper.activeIndex);
+                thumbnailRefs.current[swiper.activeIndex]?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                  inline: "center",
+                });
+              }}
+              style={{ width: "100%", height: "auto" }}
+            >
+              {galleryImages[activeGallery].map((src, index) => (
+                <SwiperSlide key={index}>
+                  <div className="main-image-container">
+                    <img
+                      src={src}
+                      alt={`${activeGallery} ${index}`}
+                      className="main-image"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-      {/* Thumbnail gallery */}
-      <div className="gallery-wrapper">
-      <div className="gallery-container">
-        {galleryImages[activeGallery].map((src, index) => (
-          <img
-            key={index}
-            ref={(el) => (thumbnailRefs.current[index] = el)}
-            src={src}
-            alt={`${activeGallery} ${index}`}
-            className={`gallery-img ${
-              index === currentSlide ? "active" : ""
-            }`}
-            onClick={() => handleThumbClick(index)}
-          />
-        ))}
-      </div>
-          </div>
+            {/* Thumbnail gallery */}
+            <div className="gallery-wrapper">
+              <div className="gallery-container">
+                {galleryImages[activeGallery].map((src, index) => (
+                  <img
+                    key={index}
+                    ref={(el) => (thumbnailRefs.current[index] = el)}
+                    src={src}
+                    alt={`${activeGallery} ${index}`}
+                    className={`gallery-img ${
+                      index === currentSlide ? "active" : ""
+                    }`}
+                    onClick={() => handleThumbClick(index)}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
