@@ -25,6 +25,11 @@ const Work = () => {
 
   return (
     <div id="work" className="work-container">
+      <div className="portfolio-title-container">
+      <h1 className="portfolio-title">
+      Featured Artwork 
+      </h1>
+      </div>
       <div className="pic-container">
         {images.map((src, i) => (
           <img key={i} src={src} alt="" className="pic" />

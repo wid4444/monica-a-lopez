@@ -72,7 +72,7 @@
     cursor: pointer;
   } */
 
-/* ------------- glass-bubble close button ------------- */
+/* ------------- glass-bubble close button (neutral) ------------- */
 .close-btn {
     --size: 40px;
   
@@ -87,26 +87,24 @@
     cursor: pointer;
   
     /* translucent “glass” */
-    /* background: rgba(255,255,255,0.15); */
-    background: linear-gradient(135deg,#ff6ec4 0%, #23d5ab 100%);
-  opacity: 0.5;
-    backdrop-filter: blur(8px) saturate(140%);
-    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
   
     /* bubble depth */
     box-shadow:
-      inset 0 1px 4px rgba(255,255,255,0.6),   /* top rim highlight   */
-      inset 0 -3px 6px rgba(0,0,0,0.25),       /* bottom inner shade  */
-      0 6px 18px rgba(0,0,0,0.35);             /* drop shadow         */
+      inset 0 2px 5px rgba(255, 255, 255, 0.7),
+      inset 0 -4px 8px rgba(0, 0, 0, 0.28),
+      0 6px 18px rgba(0, 0, 0, 0.35);
   
     display: flex;
     align-items: center;
     justify-content: center;
   
     transition:
-      transform .25s ease,
-      box-shadow .25s ease,
-      background .25s ease;
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.25s ease;
   }
   
   /* white “X” */
@@ -116,29 +114,27 @@
     position: absolute;
     width: 52%;
     height: 3px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(253, 2, 253, 0.9);
     border-radius: 2px;
-    transition: transform .25s ease, background .25s ease;
+    transition: transform 0.25s ease, background 0.25s ease;
   }
-  .close-btn::before { transform: rotate(45deg);  }
+  .close-btn::before { transform: rotate(45deg); }
   .close-btn::after  { transform: rotate(-45deg); }
   
   /* subtle glare highlight */
   .close-btn::after {
-    box-shadow: 0 0 6px 0 rgba(255,255,255,0.7);
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.7);
   }
   
-  /* ------- hover / focus: bubble swells & glows ------- */
+  /* ------- hover / focus: swell & glow ------- */
   .close-btn:hover,
   .close-btn:focus-visible {
     transform: scale(1.15) rotate(90deg);
-    /* background: rgba(255,255,255,0.20); */
-    background: linear-gradient(135deg,#ff6ec4 0%, #23d5ab 100%);
-  opacity: 0.8;
+    background: rgba(255, 255, 255, 0.22);
     box-shadow:
-      inset 0 0px 6px rgba(255,255,255,0.7),
-      inset 0 -4px 8px rgba(0,0,0,0.28),
-      0 10px 24px rgba(0,0,0,0.45);
+      inset 0 2px 6px rgba(255, 255, 255, 0.8),
+      inset 0 -5px 9px rgba(0, 0, 0, 0.32),
+      0 10px 26px rgba(0, 0, 0, 0.45);
   }
   .close-btn:hover::before { transform: rotate(135deg); }
   .close-btn:hover::after  { transform: rotate(45deg);  }
@@ -146,10 +142,10 @@
   /* ------- active (pressed) ------- */
   .close-btn:active {
     transform: scale(0.9);
-    background: rgba(255,255,255,0.18);
+    background: rgba(255, 255, 255, 0.18);
     box-shadow:
-      inset 0 3px 8px rgba(0,0,0,0.38),
-      0 4px 10px rgba(0,0,0,0.35);
+      inset 0 3px 9px rgba(0, 0, 0, 0.4),
+      0 4px 12px rgba(0, 0, 0, 0.35);
   }
 /* Modal styles */
 
@@ -169,9 +165,9 @@
   .modal {
     /* background: #ea5d5d; */
 
-    /* background-image: url('../assets/talavera1.jpg'); ; 
+    background-image: url('../assets/bg.png'); 
     background-size: cover; 
-    background-position: center;  */
+    background-position: center; 
 
     /* opacity: 0.9; */
     width: 100vw;
@@ -223,8 +219,7 @@
 
   /* TAB BUTTON */
 
-/* ----------------  Talavera-style tab buttons  ---------------- */
-.tab-btn {
+  .tab-btn {
     position: relative;
     padding: 10px 22px;
     font-family: "Montserrat", sans-serif;
@@ -237,36 +232,69 @@
     border: none;
     border-radius: 30px;
     overflow: hidden;
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+    background: rgba(255, 255, 255, 0.15);
   
-    /* vivid gradient – lapis blue → sun-yellow */
-    background: linear-gradient(135deg, #0081c9 0%, #faae2b 100%);
-  
-    /* subtle ceramic “rim” */
     box-shadow:
-      inset 0 0 0 2px rgba(255, 255, 255, 0.4),   /* white rim */
-      0 4px 10px rgba(0, 0, 0, 0.25);              /* depth */
-    transition: all 0.3s ease;
+      inset 0 1px 3px rgba(255, 255, 255, 0.45), /* inner highlight */
+      inset 0 -2px 5px rgba(0, 0, 0, 0.2),       /* subtle inner shadow */
+      0 6px 18px rgba(0, 0, 0, 0.25);           /* outer drop shadow */
+  
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background 0.3s ease,
+      filter 0.3s ease;
   }
   
-  /* Decorative painted pattern using ::before */
+  /* Decorative Talavera painted highlight pattern */
   .tab-btn::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 30px;
-    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3) 0 10%, transparent 11%),
-                      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.25) 0 8%, transparent 9%);
-    mix-blend-mode: overlay;        /* lets pattern merge with gradient */
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(48, 245, 84, 0.25) 0 10%, transparent 11%),
+      radial-gradient(circle at 80% 70%, rgba(179, 62, 246, 0.437) 0 8%, transparent 9%);
+    mix-blend-mode: overlay;
     pointer-events: none;
+    z-index: 1;
   }
   
-  /* Hover – lift + brighten */
+  /* Sweeping light effect */
+  .tab-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .tab-btn:hover::after {
+    left: 100%;
+  }
+  
+  /* Hover – glass lift & glow */
   .tab-btn:hover {
     transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow:
-      inset 0 0 0 2px rgba(255, 255, 255, 0.5),
-      0 6px 16px rgba(0, 0, 0, 0.3);
-    filter: brightness(1.05);
+      inset 0 1px 3px rgba(255, 255, 255, 0.55),
+      inset 0 -3px 6px rgba(0, 0, 0, 0.25),
+      0 8px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.08);
   }
   
   /* Active (pressed) */
@@ -277,9 +305,22 @@
       0 2px 6px rgba(0, 0, 0, 0.2);
   }
   
-  /* Highlight for selected tab */
+  /* Active tab highlight (Talavera color blend) */
   .tab-btn.active {
-    background: linear-gradient(135deg, #d93476 0%, #ff7e29 100%);
+    background: linear-gradient(135deg, #0212f6 0%, #29d4ff 100%);
+    color: #fff;
+
+  }
+
+  .tab-btn.active::before {
+    background-image:
+      radial-gradient(circle at 20% 30%, rgb(255, 255, 255) 0 10%, transparent 11%),
+      radial-gradient(circle at 80% 70%, rgba(2, 220, 249, 0.437) 0 8%, transparent 9%);
+  }
+  .tab-btn.active:focus {
+    outline: 1px solid #92b5fa; 
+    outline-offset: 1px;
+
   }
 
   /* TAB BUTTON */
@@ -288,25 +329,25 @@
   .main-image-container {
     /* border: purple solid 2px; */
      width: auto;
-    height: 74vh;
+    height: 75vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     max-width: 1200px;
   margin: 0 auto;
   }
 
   .main-image {
-    position: fixed;
-top: 5px;
+    /* position: fixed; */
+/* top: 5px; */
 
     /* border: chocolate solid 2px; */
     /* width: 80vw; */
   /* height: auto; */
-  max-height: 68vh;
+  max-height: 70vh;
     max-width: 100vw;
-  border-radius: 12px;
+  border-radius: 20px;
   /* object-fit: cover; */
 
   width: 80vw;         /* stretch to the wrapper’s width */
@@ -365,13 +406,13 @@ top: 5px;
  
   }
   .gallery-img.active {
-    outline: 1px solid #ee59fb;
+    outline: 1px solid #4be1fb;
     opacity: 0.8;
   box-shadow:
-    0 0 0px   #ea00ff,
-    0 0 0px  #ea00ff,
-    0 0 4px  #ea00ff,
-    0 0 12px  #ff00ea;
+    0 0 0px   #4be1fb,
+    0 0 0px  #4be1fb,
+    0 0 4px  #4be1fb,
+    0 0 12px  #4be1fb;
 
   animation: neon-pulse 1.4s ease-in-out infinite;
 }
@@ -425,7 +466,7 @@ top: 5px;
   border: 2px solid rgba(255,255,255,0.35);
   border-radius: 30px;
   /* padding-inline: 0;       */
-  
+
   cursor: pointer;
 
   display:flex;align-items:center;justify-content:center;
@@ -446,7 +487,41 @@ top: 5px;
   top: 50%; transform: translateY(-50%); /* centre vertically */
 }
 
-/* ------------- sweeping light ------------- */
+/* ------------ Swiper nav arrows: glass bubbles ------------ */
+.swiper-button-next,
+.swiper-button-prev {
+  --diam: 64px;               /* bubble diameter */
+
+  width:  var(--diam);
+  height: var(--diam);
+  border-radius: 50%;
+  cursor: pointer;
+
+  /* translucent “glass” base */
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+
+  /* bevel & depth */
+  box-shadow:
+    inset 0 2px 5px  rgba(255,255,255,0.7),   /* top rim highlight   */
+    inset 0 -4px 8px rgba(0,0,0,0.28),        /* bottom inner shade  */
+    0 6px 18px rgba(0,0,0,0.35);              /* drop shadow         */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+  overflow: hidden;         /* clip the sweep */
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+
+/* ---------- sweeping light highlight ---------- */
 .swiper-button-next::before,
 .swiper-button-prev::before {
   content:'';
@@ -454,62 +529,66 @@ top: 5px;
   top:0;
   left:-100%;
   width:100%;
-  height:100%;;
-  background:rgba(255,255,255,0.18);
+  height:100%;
+  background:rgba(255,255,255,0.22);
   transform:skewX(-25deg);
   transition:left .45s ease;
   pointer-events:none;
 }
 .swiper-button-next:hover::before,
-.swiper-button-prev:hover::before {
-  left:100%;
-}
+.swiper-button-prev:hover::before { left:100%; }
 
-/* -------- icon (keeps Swiper’s arrow char) -------- */
+/* ---------- arrow glyph ---------- */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color:#fff;
-  font-weight:700;
-  font-size:18px;      /* adjust if text looks cramped */
+  color:#0fe1f4;
+  font-size:22px;
+  font-weight:800;
 }
-
-/* -------- hover lift -------- */
+.swiper-button-next::after {
+  padding-top: 1px;
+  padding-left: 1px;
+}
+.swiper-button-prev::after {
+    padding-top: 1px;
+  padding-right: 5px;
+}
+/* ---------- hover lift ---------- */
 .swiper-button-next:hover,
 .swiper-button-prev:hover,
 .swiper-button-next:focus-visible,
 .swiper-button-prev:focus-visible {
-  transform: translate(-50%, -4px) /* keep vertical centering while lifting */
-             rotate(0deg);
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-60%) scale(1.12);  /* keep centered while lifting */
   box-shadow:
-    inset 0 1px 1px rgba(255,255,255,0.6),
-    0 10px 0 #bf4b74,
-    0 10px 24px rgba(0,0,0,0.35);
+    inset 0 2px 6px rgba(255,255,255,0.8),
+    inset 0 -5px 9px rgba(0,0,0,0.32),
+    0 10px 26px rgba(0,0,0,0.45);
 }
 
-/* -------- active / pressed -------- */
+/* ---------- pressed ---------- */
 .swiper-button-next:active,
 .swiper-button-prev:active {
-  transform: translate(-50%, 2px);
+  transform: translateY(-46%) scale(0.9);
   box-shadow:
-    inset 0 2px 3px rgba(0,0,0,0.4),
-    0 4px 0 #aa4065,
-    0 4px 12px rgba(0,0,0,0.25);
+    inset 0 3px 9px rgba(0,0,0,0.4),
+    0 4px 12px rgba(0,0,0,0.35);
 }
 
-/* optional: distance from edges */
-/* .swiper-button-prev { left: 18px;  }
-.swiper-button-next { right: 18px; } */
+/* distance from edges (adjust if needed) */
+.swiper-button-prev { left: 18px; }
+.swiper-button-next { right: 18px; }
 
-/* keep pagination bullet color */
+/* keep bullet highlight */
 .swiper-pagination-bullet-active { background:#f408d9; }
   
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .modal {
       width: 100vw;
       height: 100vh;
       border-radius: 0;
     }
-  }
+  } */
   
   /* .close-btn {
     position: absolute;
@@ -554,4 +633,72 @@ top: 5px;
     /* height: 150px; */
     object-fit: cover;
     /* border-radius: 4px; */
+  }
+
+
+  /* ---------------- Mobile (≤ 600 px)  ---------------- */
+@media (max-width: 600px) {
+    
+    .modal {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+      }
+      .modal-overlay {
+        height: 97%;
+    }
+   .main-image-container {
+       margin-top: 20px;
+      height: 60vh; /* let height adjust naturally */
+      justify-content: center;
+        align-items: center;
+    
+    }
+    .main-image {
+      width: 90vw;         /* stretch to the wrapper’s width */
+      height: auto;        /* keep aspect-ratio */
+      object-fit: contain; /* show full picture, no cropping */
+      display: block;
+      max-height: 60vh;
+    }
+    /* stack the whole group a little lower from top edge if needed */
+    .tabs-container {
+      gap: 12px;
+      /* padding-inline: 10px;        */
+      padding-top: 0px;            /* space from top edge */
+    }
+  
+    /* let the buttons wrap and stay centred */
+    .tabs {
+      flex-wrap: wrap;                /* ⭐️ key line */
+      justify-content: space-between; /* spread out */
+      gap: 12px;                      /* tighter gap on small screens */
+      margin: 0;
+    }
+  
+    /* scale button down a bit so 2–3 fit per row comfortably */
+    .tab-btn {
+      padding: 8px 16px;
+      font-size: 0.75rem;             /* was 0.9rem */
+      border-radius: 24px;
+    }
+  
+    /* keep active / hover styles intact, just smaller shadow */
+    .tab-btn:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        inset 0 1px 3px rgba(255,255,255,0.55),
+        inset 0 -2px 5px rgba(0,0,0,0.25),
+        0 6px 14px rgba(0,0,0,0.28);
+    }
+    .tab-btn:active {
+      transform: translateY(1px);
+      box-shadow:
+        inset 0 2px 3px rgba(0,0,0,0.35),
+        0 2px 5px rgba(0,0,0,0.2);
+    }
+    .swiper-pagination-horizontal {
+        overflow-x: auto;
+      display: none; /* hide pagination on small screens */
+    }
   }

@@ -15,6 +15,26 @@
 } */
 
 /* main wrapper */
+.portfolio-title-container {
+    /* border: #f408d9 solid 2px; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; */
+    width: 100%;
+    max-width: 90rem;
+    /* margin-left: 30rem; */
+    /* padding: 2rem; */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.portfolio-title {
+    font-size: 3rem;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #f408d9;
+    margin: 0 0 1rem 1rem;  
+}
 .pic-container {
     /* border: #00d4ff solid 2px; */
     display: grid;

@@ -87,6 +87,7 @@ import prints3 from "../assets/prints/3.jpg";
 import prints4 from "../assets/prints/4.jpg";
 import prints5 from "../assets/prints/5.jpg";
 
+
 import wood1 from "../assets/wood/1.jpg";
 import wood2 from "../assets/wood/2.jpg";
 import wood3 from "../assets/wood/3.jpg";
@@ -219,12 +220,13 @@ function Modal() {
               <div className="tabs">
                 {[
                   "murals",
+                  "prints",
+                  "wood",
                   "acrylics and mix media",
                   "art instructor",
                   "cultural makeup",
                   "embossing aluminum",
-                  "prints",
-                  "wood",
+                  
                 ].map((section) => (
                   <button
                     key={section}

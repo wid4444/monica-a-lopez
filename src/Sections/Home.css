@@ -66,7 +66,7 @@
   /* Specific hover colors (muted brand tones) */
   .social-media-icon.facebook:hover {
     /* background-color: #2d4373; */
-    color: #2d4373;
+    color: #135bf6;
     box-shadow:
     inset 0 3px 10px rgba(244, 242, 242, 0.655),   /* subtle inner highlight */
     0 0px 2px rgba(249, 248, 248, 0.506);
@@ -74,7 +74,7 @@
   
   .social-media-icon.linkedin:hover {
     /* background-color: #005983; */
-    color: #005983;
+    color: #0263ff;
     box-shadow:
     inset 0 3px 10px rgba(244, 242, 242, 0.655),   /* subtle inner highlight */
     0 0px 2px rgba(249, 248, 248, 0.506);
@@ -82,12 +82,12 @@
   
   .social-media-icon.instagram:hover {
     /* background-color: #5a3e36; */
-    color: pink;
+    color: rgb(246, 6, 242);
     box-shadow:
     inset 0 3px 10px rgba(244, 242, 242, 0.655),   /* subtle inner highlight */
     0 0px 2px rgba(249, 248, 248, 0.506);
 
-    color: pink;
+    color: rgb(253, 4, 245);
     /* background-clip: text;
     background-image: linear-gradient(
       to right,
@@ -98,7 +98,7 @@
   
   .social-media-icon.youtube:hover {
     /* background-color: #8b0000; */
-    color: #8b0000;
+    color: #f70505;
     box-shadow:
     inset 0 3px 10px rgba(244, 242, 242, 0.655),   /* subtle inner highlight */
     0 0px 2px rgba(249, 248, 248, 0.506);
@@ -131,7 +131,11 @@
   }
   
   .name {
-    font-size: 2.5rem;
+    /* font-family: "Alex Brush", cursive; */
+    /* font-family: 'Caveat', cursive; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
     margin: 0;
   }
   
