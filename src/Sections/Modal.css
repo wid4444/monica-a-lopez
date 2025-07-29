@@ -582,6 +582,6 @@
     display: none; /* hide pagination on small screens */
   }
   .gallery-container {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
