@@ -58,7 +58,7 @@
   --size: 40px;
 
   position: absolute;
-  top: 10px;
+  top: 30px;
   right: 10px;
 
   width: var(--size);
@@ -522,8 +522,11 @@
 @media (max-width: 768px) {
   .modal {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 940px;
     border-radius: 0;
+    
+
   }
   .modal-overlay {
     height: 97%;
@@ -545,7 +548,7 @@
   .tabs-container {
     gap: 10px;
     /* padding-inline: 10px;        */
-    padding-top: 0px; /* space from top edge */
+    padding-top: 20px; /* space from top edge */
   }
 
   /* let the buttons wrap and stay centred */
