@@ -15,17 +15,12 @@ const About = () => {
           <div className="bio-section-es ">
             <h3>¿Quién soy?</h3>
             <p>
-              Mi nombre es <strong>Monica López</strong>, artista visual,
-              muralista e instructora de técnica mixta. Crecí en Puebla, México
-              – un lugar rico en cultura – y desde pequeña descubrí mi pasión
-              por el dibujo y la pintura.
+              Mi nombre es <strong>Monica López</strong>. Soy una artista autodidacta y local en Delaware. Me dedico en las artes visuales, soy muralista e instructora de mix media.
             </p>
 
             <h3>Inspiración</h3>
             <p>
-              Mis raíces poblanas, las texturas y la fuerza del color alimentan
-              cada obra. Uso tonos vibrantes para la alegría, oscuros para la
-              melancolía y neón para mis momentos de locura.
+            Arraigada en mi herencia y en mi camino como inmigrante, mi trabajo se expresa a través del color como su lenguaje.
             </p>
 
             {/* Pull quote */}
@@ -37,36 +32,30 @@ const About = () => {
             <h3>Propósito</h3>
             <p>
               Quiero compartir mi conocimiento con la comunidad latina y
-              capturar corazones a través del arte, mientras persigo un título
-              en artes visuales.
+              capturar el corazon de otras culturas a través del arte.
             </p>
           </div>
 
           <div className="bio-section-en">
             <h3>About Me</h3>
             <p>
-              My name is <strong>Monica Lopez</strong> — Visual Artist, Muralist
-              & Teaching Artist. Raised in Puebla, Mexico, I’ve been passionate
-              about art since childhood.
+              My name is <strong>Monica Lopez</strong>. I’m a self-taught visual artist and local muralist based in Delaware. I specialize in visual arts and work as a mixed media instructor.
             </p>
 
             <h3>Inspiration</h3>
             <p>
-              My work draws from my heritage and my immigration journey to the
-              U.S. Colors are my language: dark for nostalgia, light for
-              happiness, neon for fearlessness.
+            Rooted in my heritage and immigration journey, my work speaks through color as its language.
             </p>
 
             {/* Pull quote */}
             <blockquote>
-              “Art lets me express a deep love for my heritage and culture.”
+              “What your hands and imagination can create together is amazing.”
             </blockquote>
 
             <h3>Mission</h3>
             <p>
-              I strive to share knowledge with the Latinx community and connect
-              with wider audiences through my paintings — on my path to a
-              visual-arts degree.
+              I want to share my knowledge with the Latin community and capture
+              the hearts of other cultures through art.
             </p>
           </div>
         </section>
