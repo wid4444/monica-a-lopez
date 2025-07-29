@@ -1,189 +1,180 @@
 .home-container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.header {
+  padding: 0px;
+  margin-right: 40px;
+  width: 98vw;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+.logo-container {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 10;
+}
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.social-media {
+  margin-right: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-media-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #ccc;
+  text-decoration: none;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.social-media-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Specific hover colors (muted brand tones) */
+.social-media-icon.facebook:hover {
+  color: #135bf6;
+  box-shadow: inset 0 3px 10px rgba(244, 242, 242, 0.655),
+    /* subtle inner highlight */ 0 0px 2px rgba(249, 248, 248, 0.506);
+}
+
+.social-media-icon.linkedin:hover {
+  color: #0263ff;
+  box-shadow: inset 0 3px 10px rgba(244, 242, 242, 0.655),
+    /* subtle inner highlight */ 0 0px 2px rgba(249, 248, 248, 0.506);
+}
+
+.social-media-icon.instagram:hover {
+  color: rgb(246, 6, 242);
+  box-shadow: inset 0 3px 10px rgba(244, 242, 242, 0.655),
+    /* subtle inner highlight */ 0 0px 2px rgba(249, 248, 248, 0.506);
+
+  color: rgb(253, 4, 245);
+}
+
+.social-media-icon.youtube:hover {
+  color: #f70505;
+  box-shadow: inset 0 3px 10px rgba(244, 242, 242, 0.655),
+    /* subtle inner highlight */ 0 0px 2px rgba(249, 248, 248, 0.506);
+}
+.social-media-icon.threads:hover {
+  color: #a605f7;
+  box-shadow: inset 0 3px 10px rgba(244, 242, 242, 0.655),
+    /* subtle inner highlight */ 0 0px 2px rgba(249, 248, 248, 0.506);
+}
+.social-media-icon.tiktok:hover {
+  color: #f94c4c;
+  box-shadow: inset 0 3px 10px rgba(244, 242, 242, 0.655),
+    /* subtle inner highlight */ 0 0px 2px rgba(249, 248, 248, 0.506);
+}
+
+.bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.bg-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.name {
+  /* font-family: "Alex Brush", cursive; */
+  /* font-family: 'Caveat', cursive; */
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.caption {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* ───────── Mobile layout: ≤ 768 px ───────── */
+@media (max-width: 768px) {
+  .home-container {
     height: 100vh;
-    overflow: hidden;
+    width: 100vw;
   }
+  /* keep header items in a right-side column */
   .header {
-    /* border: white 2px solid; */
-    padding: 0px;
-    margin-right: 40px;
-    width: 98vw;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-  }
-  .logo-container {
-    /* border: violet 2px solid; */
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    z-index: 10;
-  }
-  .logo {
-    width: 150px;
-    height: auto;
-  }
-
-  .social-media {
-    /* border: yellow 2px solid; */
-    margin-right: 100px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .social-media-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    /* border: #a8a7a7 .5px solid; */
-    border-radius: 50%;
-    /* background: #1c1c1c; */
-    color: #ccc;
-    text-decoration: none;
-    box-shadow:
-    inset 0 2px 4px rgba(255, 255, 255, 0.15),
-      0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-  }
-  
-  .social-media-icon:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Specific hover colors (muted brand tones) */
-  .social-media-icon.facebook:hover {
-    /* background-color: #2d4373; */
-    color: #135bf6;
-    box-shadow:
-    inset 0 3px 10px rgba(244, 242, 242, 0.655),   /* subtle inner highlight */
-    0 0px 2px rgba(249, 248, 248, 0.506);
-  }
-  
-  .social-media-icon.linkedin:hover {
-    /* background-color: #005983; */
-    color: #0263ff;
-    box-shadow:
-    inset 0 3px 10px rgba(244, 242, 242, 0.655),   /* subtle inner highlight */
-    0 0px 2px rgba(249, 248, 248, 0.506);
-  }
-  
-  .social-media-icon.instagram:hover {
-    /* background-color: #5a3e36; */
-    color: rgb(246, 6, 242);
-    box-shadow:
-    inset 0 3px 10px rgba(244, 242, 242, 0.655),   /* subtle inner highlight */
-    0 0px 2px rgba(249, 248, 248, 0.506);
-
-    color: rgb(253, 4, 245);
-    /* background-clip: text;
-    background-image: linear-gradient(
-      to right,
-      pink, purple
-     ); */
-     
-  }
-  
-  .social-media-icon.youtube:hover {
-    /* background-color: #8b0000; */
-    color: #f70505;
-    box-shadow:
-    inset 0 3px 10px rgba(244, 242, 242, 0.655),   /* subtle inner highlight */
-    0 0px 2px rgba(249, 248, 248, 0.506);
-  }
-  
-  .bg-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: 0;
-  }
-  
-  .bg-slide.active {
-    opacity: 1;
-    z-index: 1;
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    color: white;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-  }
-  
-  .name {
-    /* font-family: "Alex Brush", cursive; */
-    /* font-family: 'Caveat', cursive; */
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
+    flex-direction: column; /* logo on top, icons under */
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100vh; /* let it grow */
+    width: auto;
+    top: 1rem;
+    right: 1rem;
     margin: 0;
   }
-  
-  .caption {
-    font-size: 1.2rem;
-    margin-top: 10px;
+
+  /* logo first */
+  .logo-container {
+    position: static; /* obey .header's flex layout */
+    margin-bottom: 1rem;
+  }
+  .logo {
+    width: 80px; /* a bit smaller on phones */
   }
 
-  /* ───────── Mobile layout: ≤ 768 px ───────── */
-@media (max-width: 768px) {
-    /* keep header items in a right-side column */
-    .header {
-      flex-direction: column;      /* logo on top, icons under */
-      justify-content: space-between;
-      align-items: flex-end;
-      height: 100vh;                /* let it grow */
-      width: auto;
-      top: 1rem;
-      right: 1rem;
-      margin: 0;
-      /* left: auto;       */
-    }
-  
-    /* logo first */
-    .logo-container {
-      position: static;            /* obey .header's flex layout */
-      margin-bottom: 1rem;
-    }
-    .logo {
-      width: 80px;                /* a bit smaller on phones */
-    }
-  
-    /* stack icons vertically */
-    .social-media {
-        /* border: #005983 1px solid;  */
-        height: 100%; /* let it fill the column */
-      /* margin: 0;   */
-      margin-right: 1rem; 
-      margin-bottom: 3rem;          
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 16px;
-    }
-    .overlay {
-        position: absolute;
-        bottom: 4%;
-        left: 5%;
-        color: white;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-      }
+  /* stack icons vertically */
+  .social-media {
+    height: 100%; /* let it fill the column */
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
   }
+  .overlay {
+    position: absolute;
+    bottom: 4%;
+    left: 5%;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  }
+}

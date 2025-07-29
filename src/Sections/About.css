@@ -1,231 +1,198 @@
 .about-container {
-    /* border: #08f40c solid 2px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    color: black;
-    /* background-color: #08f40c; */
-    background-image: url('../assets/about-background-d.png') ; 
-    background-size: cover; 
-    background-position: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  background-image: url("../assets/about-background-d.png");
+  background-size: cover;
+  background-position: center;
 }
 .bio-container {
-    /* border: #f408d9 solid 2px; */
-
-    width: 80vw;
-    margin: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    
-
+  width: 80vw;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .bio-header {
-    /* border: #f408d9 solid 2px; */
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-evenly;
-    /* padding: 2rem 0; */
-    gap: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10rem;
 }
 
-  .bio-img {
-    float: right;
-    width: 400px;        
-    height: auto;
-    border-radius: 12px;
-    margin: 0 0rem 0rem 2rem;  
-    box-shadow: 0 4px 12px rgba(0,0,0,.25);
-  }
-  
-
+.bio-img {
+  float: right;
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 0rem 0rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
 
 .bio-title {
-    font-size: 3rem;
-    font-family: 'Segoe UI', Roboto,;
-    font-weight: 600;
-    font-style: normal;
+  font-size: 3rem;
+  font-family: "Segoe UI", Roboto;
+  font-weight: 600;
+  font-style: normal;
 
-    margin: 0 0 1rem 1rem; 
+  margin: 0 0 1rem 1rem;
 }
 
-
 .about-wrapper {
-    /* border: #08f40c solid 2px; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem;
-    padding:2rem;
-    gap: 4rem;
-    /* width: 100%; */
-    /* height: 100%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 2rem;
+  gap: 4rem;
 }
 
 .bio-section-es {
-    border-top: #f165e1 solid 4px;
-    border-radius: 10px;
-    padding: .5em;
-    width: 100%;
-    height: 100%;
-    color: #434343;
-    
+  border-top: #f165e1 solid 4px;
+  border-radius: 10px;
+  padding: 0.5em;
+  width: 100%;
+  height: 100%;
+  color: #434343;
 }
 .bio-section-en {
-    border-top: #c66af5 solid 4px;
-    border-radius: 10px;
-    padding: .5rem;
-    width: 100%;
-    height: 100%;
-    color: #434343;
-
+  border-top: #c66af5 solid 4px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  color: #434343;
 }
-.bio-section-en h3, 
-.bio-section-es h3{
-    margin: 0;
-  display: inline-block;   /* ⬅️ key line */
+.bio-section-en h3,
+.bio-section-es h3 {
+  margin: 0;
+  display: inline-block; /* ⬅️ key line */
   border-bottom: 2px solid #555;
-  padding-bottom: 2px; 
+  padding-bottom: 2px;
 }
 
+blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #4767fa;
+  font-style: italic;
+  color: #555;
+}
 
- blockquote {
-    margin: 1rem 0;
-    padding-left: 1rem;
-    border-left: 4px solid #4767fa;
-    font-style: italic;
-    color: #555;
-  }
+/* resume btn */
 
-  /* resume btn */
+.resume-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-family: "Caveat", cursive;
+  background: linear-gradient(135deg, #ff66b2, #6394f5);
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    /* highlight on top */ 0 6px 0 #a04acc,
+    /* "base" layer for 3D effect */ 0 8px 20px rgba(0, 0, 0, 0.25); /* outer glow */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
-  .resume-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-    font-family: 'Caveat', cursive;
-    background: linear-gradient(135deg, #ff66b2, #6394f5);
-    color: white;
-    text-decoration: none;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.6), /* highlight on top */
-      0 6px 0 #a04acc,                         /* "base" layer for 3D effect */
-      0 8px 20px rgba(0, 0, 0, 0.25);         /* outer glow */
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .resume-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    transform: skewX(-30deg);
-    transition: left 0.4s ease;
-  }
-  
-  .resume-btn:hover::after {
-    left: 100%;
-  }
-  
-  .resume-btn:hover {
-    color: #7c34b5;
-    transform: translateY(-4px);
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.6),
-      0 12px 0 #8c40c2,
-      0 12px 25px rgba(0, 0, 0, 0.35);
-  }
-  
-  .resume-btn:active {
-    transform: translateY(2px);
-    box-shadow:
-      inset 0 2px 3px rgba(0, 0, 0, 0.4),
-      0 4px 0 #7c34b5,
-      0 4px 10px rgba(0, 0, 0, 0.2);
-  }
+.resume-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-30deg);
+  transition: left 0.4s ease;
+}
 
+.resume-btn:hover::after {
+  left: 100%;
+}
+
+.resume-btn:hover {
+  color: #7c34b5;
+  transform: translateY(-4px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6), 0 12px 0 #8c40c2,
+    0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+.resume-btn:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4), 0 4px 0 #7c34b5,
+    0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 /* ─────────  Mobile / Tablet  ───────── */
 @media (max-width: 768px) {
-
-    /* swap to the mobile background you already picked */
-    .about-container {
-      background-image: url('../assets/about-background-c.png');
-      height: auto;
-      width: 100vw;
-      margin: 0;
-      padding: 0;
-    }
-  
-    /* stack image + title nicely */
-    .bio-header {
-      flex-direction: column;    
-        align-items: center;         /* center image + title */
-        justify-content: center;     /* center image + title */
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-  
-    .bio-img {
-      width: 300px;                /* smaller portrait */
-      float: none;   
-      margin: 0;              /* cancel desktop float */
-    }
-  
-    .bio-title {
-      font-size: 2rem;
-      /* margin: 0;
-      padding: 0; */
-      /* text-align: center; */
-    }
-  
-    /*  ⭐️ stack Spanish / English cards vertically  */
-    .about-wrapper {
-
-      flex-direction: column;      /* side-by-side → top-to-bottom */
-      gap: 0;       
-        margin: 0;
-     padding: 2rem;
-      width: 100vw;
-    }
-  
-    /* optional: give each card full width */
-    .bio-section-es,
-    .bio-section-en {
-      width: 95vw;
-    }
-    .bio-section-es h3,
-    .bio-section-en h3 {
-      /* text-align: center;   */
-        font-size: 1.1rem;
-        /* margin: 0;
-        padding: 0; */
-    }
-    .bio-section-es p,
-    .bio-section-en p {
-      /* text-align: center;   */
-        font-size: .9rem;
-        /* margin: 0;
-        padding: 0; */
-    }
+  /* swap to the mobile background you already picked */
+  .about-container {
+    background-image: url("../assets/about-background-c.png");
+    height: auto;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .bio-container {
+    width: 100vw; /* full width */
+    margin: 0; /* cancel desktop margin */
+    padding: 2rem; /* add some padding */
   }
 
-  
-  
+  /* stack image + title nicely */
+  .bio-header {
+    flex-direction: column;
+    align-items: center; /* center image + title */
+    justify-content: center; /* center image + title */
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bio-img {
+    width: 300px; /* smaller portrait */
+    float: none;
+    margin: 0; /* cancel desktop float */
+  }
+
+  .bio-title {
+    font-size: 2rem;
+  }
+
+  /*  ⭐️ stack Spanish / English cards vertically  */
+  .about-wrapper {
+    flex-direction: column; /* side-by-side → top-to-bottom */
+    gap: 0;
+    margin: 0;
+    padding: 2rem;
+    width: 100vw;
+  }
+
+  /* optional: give each card full width */
+  .bio-section-es,
+  .bio-section-en {
+    width: 95vw;
+  }
+  .bio-section-es h3,
+  .bio-section-en h3 {
+    font-size: 1.1rem;
+  }
+  .bio-section-es p,
+  .bio-section-en p {
+    font-size: 0.9rem;
+  }
+}

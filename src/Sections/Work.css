@@ -1,147 +1,207 @@
 .work-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    gap: 4rem;
-    background-image: url('../assets/bg.png') ; 
-    background-size: cover;
-    /* background-color: #f40808; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100%;
+  gap: 4rem;
+  background-image: url("../assets/bg.png");
+  background-size: cover;
 }
-/* .modal-container {
-    border: pink solid 2px;
-} */
+.modal-container {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
 
 /* main wrapper */
 .portfolio-title-container {
-    /* border: #f408d9 solid 2px; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center; */
-    width: 100%;
-    max-width: 90rem;
-    /* margin-left: 30rem; */
-    /* padding: 2rem; */
-    /* background-color: rgba(0, 0, 0, 0.5); */
+  width: 100%;
+  max-width: 90rem;
 }
 .portfolio-title {
-    font-size: 3rem;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    color: #f408d9;
-    margin: 0 0 1rem 1rem;  
+  font-size: 3rem;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #f408d9;
+  margin: 0 0 1rem 1rem;
 }
 .pic-container {
-    /* border: #00d4ff solid 2px; */
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2.5rem;
   max-width: 50vw;
   margin: 0 auto;
-  padding: 2rem;
-  }
-  
-  .pic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 14px 26px -8px rgba(48, 0, 111, 0.5);
-  }
-  
-  .pic:hover {
-    z-index: 20;
-    transform: translateY(-6px) scale(1.6);
-    box-shadow: 0 18px 32px -6px rgba(1, 241, 249, 0.5);
-  }
-  
-  .pic:nth-child(1)  { transform: translate( 10px,  0px) rotate(-2deg); }
-  .pic:nth-child(2)  { transform: translate(-15px, 20px) rotate( 3deg); }
-  .pic:nth-child(3)  { transform: translate( 20px,-15px) rotate(-1deg); }
-  .pic:nth-child(4)  { transform: rotate( 2deg) translate(-10px, 10px);}
-  .pic:nth-child(5)  { transform: rotate( 4deg) translate(-20px,  15px); }
-  .pic:nth-child(6)  { transform: rotate(-5deg) translate( 25px,  25px); }
-  .pic:nth-child(7)  { transform: rotate( 2deg) translate(-15px,-20px); }
-  .pic:nth-child(8)  { transform: rotate( 3deg) translate(-25px,  25px); }
-  
- /* ---------- Subtle default offsets ---------- */
-.pic:nth-child(1)     { transform: rotate(12deg) translate(3px, -3px); }
-.pic:nth-child(2)     { transform: rotate( -10deg) translate(-3px, -3px); }
-.pic:nth-child(3)     { transform: rotate(8deg) translate(3px, 3px); }
-.pic:nth-child(4)     { transform: rotate( -8deg) translate(-3px, -3px); }
-.pic:nth-child(5)     { transform: rotate(-4deg) translate(3px, -3px); }
-.pic:nth-child(6)     { transform: rotate( 18deg) translate(-3px, 3px); }
-.pic:nth-child(7)     { transform: rotate(-9deg) translate(3px, -3px); }
-.pic:nth-child(8)     { transform: rotate( 15deg) translate(-3px, 3px); }
+}
+
+.pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 14px 26px -8px rgba(48, 0, 111, 0.5);
+}
+
+.pic:hover {
+  z-index: 20;
+  transform: translateY(-6px) scale(1.6);
+  box-shadow: 0 18px 32px -6px rgba(1, 241, 249, 0.5);
+}
+
+.pic:nth-child(1) {
+  transform: translate(10px, 0px) rotate(-2deg);
+}
+.pic:nth-child(2) {
+  transform: translate(-15px, 20px) rotate(3deg);
+}
+.pic:nth-child(3) {
+  transform: translate(20px, -15px) rotate(-1deg);
+}
+.pic:nth-child(4) {
+  transform: rotate(2deg) translate(-10px, 10px);
+}
+.pic:nth-child(5) {
+  transform: rotate(4deg) translate(-20px, 15px);
+}
+.pic:nth-child(6) {
+  transform: rotate(-5deg) translate(25px, 25px);
+}
+.pic:nth-child(7) {
+  transform: rotate(2deg) translate(-15px, -20px);
+}
+.pic:nth-child(8) {
+  transform: rotate(3deg) translate(-25px, 25px);
+}
+
+/* ---------- Subtle default offsets ---------- */
+.pic:nth-child(1) {
+  transform: rotate(12deg) translate(3px, -3px);
+}
+.pic:nth-child(2) {
+  transform: rotate(-10deg) translate(-3px, -3px);
+}
+.pic:nth-child(3) {
+  transform: rotate(8deg) translate(3px, 3px);
+}
+.pic:nth-child(4) {
+  transform: rotate(-8deg) translate(-3px, -3px);
+}
+.pic:nth-child(5) {
+  transform: rotate(-4deg) translate(3px, -3px);
+}
+.pic:nth-child(6) {
+  transform: rotate(18deg) translate(-3px, 3px);
+}
+.pic:nth-child(7) {
+  transform: rotate(-9deg) translate(3px, -3px);
+}
+.pic:nth-child(8) {
+  transform: rotate(15deg) translate(-3px, 3px);
+}
 
 /* ---------- Hover: same lift, subtle rotation tweak ---------- */
 .pic:hover {
-  transform: scale(1.04) translateY(-6px);      /* universal lift */
+  transform: scale(1.04) translateY(-6px); /* universal lift */
 }
 
 /* Add a tiny extra rotation per index */
-.pic:nth-child(1):hover { transform: scale(1.3) translateY(-6px) rotate(-6deg); }
-.pic:nth-child(2):hover { transform: scale(1.3) translateY(-6px) rotate( 2deg); }
-.pic:nth-child(3):hover { transform: scale(1.3) translateY(-6px) rotate(-1deg); }
-.pic:nth-child(4):hover { transform: scale(1.3) translateY(-6px) rotate( 1deg); }
-.pic:nth-child(5):hover { transform: scale(1.3) translateY(-6px) rotate(-2deg); }
-.pic:nth-child(6):hover { transform: scale(1.3) translateY(-6px) rotate( 10deg); }
-.pic:nth-child(7):hover { transform: scale(1.3) translateY(-6px) rotate(-1deg); }
-.pic:nth-child(8):hover { transform: scale(1.3) translateY(-6px) rotate( 0deg); }
+.pic:nth-child(1):hover {
+  transform: scale(1.3) translateY(-6px) rotate(-6deg);
+}
+.pic:nth-child(2):hover {
+  transform: scale(1.3) translateY(-6px) rotate(2deg);
+}
+.pic:nth-child(3):hover {
+  transform: scale(1.3) translateY(-6px) rotate(-1deg);
+}
+.pic:nth-child(4):hover {
+  transform: scale(1.3) translateY(-6px) rotate(1deg);
+}
+.pic:nth-child(5):hover {
+  transform: scale(1.3) translateY(-6px) rotate(-2deg);
+}
+.pic:nth-child(6):hover {
+  transform: scale(1.3) translateY(-6px) rotate(10deg);
+}
+.pic:nth-child(7):hover {
+  transform: scale(1.3) translateY(-6px) rotate(-1deg);
+}
+.pic:nth-child(8):hover {
+  transform: scale(1.3) translateY(-6px) rotate(0deg);
+}
 
-   
 /* ------------ mobile rules ------------- */
-@media (max-width: 600px) {
-    .work-container {
-        justify-content: flex-start;
-    }
-    /* 1️⃣  stack vertically, center */
-    .pic-container {
-        
-      grid-template-columns: 1fr;      /* one column */
-      max-width: 300px;                /* keeps column narrow & centred */
-      max-height: 750px;
-      justify-items: center;           /* center the images */
-      gap: 1.5rem;                     /* a bit tighter */
-      padding: 0px;
-      margin: 0;
-    }
-  
-    /* 2️⃣  hide everything after the 4th picture */
-    .pic:nth-child(n + 5) {
-      display: none;
-    }
-  
-    /* 3️⃣  tone-down the big offsets so they don’t look lopsided */
-    .pic {
-        
-        width: 50%;               /* make images smaller */
-      transform: none;                 /* reset default offsets */
-    }
-    .pic:hover {
-        z-index: 20; 
-      transform: scale(1.04) translateY(-6px);
-    }
-    
-  .pic:nth-child(1)  { transform: translate( 60px,  80px) rotate(15deg)}
-  .pic:nth-child(2)  { transform: translate(-60px, -0px) rotate( -20deg) ; }
+@media (max-width: 768px) {
+  .work-container {
+    justify-content: flex-start;
+    gap: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  /* 1️⃣  stack vertically, center */
+  .pic-container {
+    grid-template-columns: 1fr; /* one column */
+    max-width: 300px; /* keeps column narrow & centred */
+    max-height: 750px;
+    justify-items: center; /* center the images */
+    gap: 1rem; /* a bit tighter */
+    padding: 0;
+    margin: 0;
+  }
 
- 
-  .pic:nth-child(3)  { transform: translate( 60px, -40px) rotate(-10deg); }
-  .pic:nth-child(4)  { transform: translate(-60px, -100px) rotate( 10deg) ; }
+  /* 2️⃣  hide everything after the 4th picture */
+  .pic:nth-child(n + 5) {
+    display: none;
+  }
+
+  /* 3️⃣  tone-down the big offsets so they don’t look lopsided */
+  .pic {
+    width: 50%; /* make images smaller */
+    transform: none; /* reset default offsets */
+  }
+  .pic:hover {
+    z-index: 20;
+    transform: scale(1.04) translateY(-6px);
+  }
+
+  .pic:nth-child(1) {
+    transform: translate(60px, 80px) rotate(15deg);
+  }
+  .pic:nth-child(2) {
+    transform: translate(-60px, -0px) rotate(-20deg);
+  }
+
+  .pic:nth-child(3) {
+    transform: translate(60px, -40px) rotate(-10deg);
+  }
+  .pic:nth-child(4) {
+    transform: translate(-60px, -100px) rotate(10deg);
+  }
 
   /* hover lift keeps the sideways offset */
-  .pic:nth-child(1):hover { transform: translateX(10px) translateY(100px) scale(1.3); }
-  .pic:nth-child(2):hover { transform: translateX(-10px) translateY(-6px) scale(1.3); }
-
-  .pic:nth-child(3):hover   { transform: translateX(40px) translateY(-100px) scale(1.3); }
-  .pic:nth-child(4):hover { transform: translateX( -40px) translateY(-150px) scale(1.3); }
+  .pic:nth-child(1):hover {
+    transform: translateX(10px) translateY(100px) scale(1.3);
   }
- 
-  
-  
+  .pic:nth-child(2):hover {
+    transform: translateX(-10px) translateY(-6px) scale(1.3);
+  }
+
+  .pic:nth-child(3):hover {
+    transform: translateX(40px) translateY(-100px) scale(1.3);
+  }
+  .pic:nth-child(4):hover {
+    transform: translateX(-40px) translateY(-150px) scale(1.3);
+  }
+}
+.portfolio-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #f408d9;
+  margin: 1rem 0 0rem 1rem;
+}
+.modal-container {
+  margin-top: 20px;
+}

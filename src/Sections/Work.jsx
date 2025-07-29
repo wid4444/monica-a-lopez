@@ -10,25 +10,13 @@ import pic6 from "../assets/pic/6.jpeg";
 import pic7 from "../assets/pic/7.jpeg";
 import pic8 from "../assets/pic/8.jpeg";
 
-
 const Work = () => {
-  const images = [
-    pic1,
-    pic2,
-    pic3,
-    pic4,
-    pic5,
-    pic6,
-    pic7,
-    pic8,
-  ];
+  const images = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8];
 
   return (
     <div id="work" className="work-container">
       <div className="portfolio-title-container">
-      <h1 className="portfolio-title">
-      Featured Artwork 
-      </h1>
+        <h1 className="portfolio-title">Featured Artwork</h1>
       </div>
       <div className="pic-container">
         {images.map((src, i) => (
