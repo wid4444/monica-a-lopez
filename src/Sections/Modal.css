@@ -58,7 +58,7 @@
   --size: 40px;
 
   position: absolute;
-  top: 30px;
+  top: 40px;
   right: 10px;
 
   width: var(--size);
@@ -580,5 +580,8 @@
   .swiper-pagination-horizontal {
     overflow-x: auto;
     display: none; /* hide pagination on small screens */
+  }
+  .gallery-container {
+    margin-bottom: 1rem;
   }
 }
