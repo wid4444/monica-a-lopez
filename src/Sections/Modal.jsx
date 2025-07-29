@@ -150,10 +150,10 @@ import aluminio11 from "../assets/aluminio/11.jpg";
 import aluminio12 from "../assets/aluminio/12.jpg";
 import aluminio13 from "../assets/aluminio/13.jpg";
 import aluminio14 from "../assets/aluminio/14.jpg";
-import aluminio15 from "../assets/aluminio/15.jpg";
-import aluminio16 from "../assets/aluminio/16.jpg";
-import aluminio17 from "../assets/aluminio/17.jpg";
-import aluminio18 from "../assets/aluminio/18.jpg";
+// import aluminio15 from "../assets/aluminio/15.jpg";
+// import aluminio16 from "../assets/aluminio/16.jpg";
+// import aluminio17 from "../assets/aluminio/17.jpg";
+// import aluminio18 from "../assets/aluminio/18.jpg";
 
 import prints1 from "../assets/prints/1.jpg";
 import prints2 from "../assets/prints/2.jpg";
@@ -346,10 +346,10 @@ function Modal() {
       aluminio12,
       aluminio13,
       aluminio14,
-      aluminio15,
-      aluminio16,
-      aluminio17,
-      aluminio18,
+      // aluminio15,
+      // aluminio16,
+      // aluminio17,
+      // aluminio18,
     ],
     prints: [prints1, prints2, prints3, prints4, prints5],
     wood: [wood1, wood2, wood3, wood4, wood5, wood6, wood7],
