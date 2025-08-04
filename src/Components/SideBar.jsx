@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BiSolidBriefcaseAlt2 } from "react-icons/bi";
 import { FaUserTie } from "react-icons/fa";
 import { IoMenu, IoHome, IoApps } from "react-icons/io5";
