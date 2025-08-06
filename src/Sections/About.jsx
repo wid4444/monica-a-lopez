@@ -62,7 +62,7 @@ const About = () => {
 
         <a
           href={resume} /* path relative to public root */
-          download /* forces download instead of opening in new tab */
+          download="Monica-A-Lopez-Resume.pdf"
           className="resume-btn"
         >
           🎨 Download Resume PDF

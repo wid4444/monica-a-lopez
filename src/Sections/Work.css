@@ -37,6 +37,7 @@
   margin: 0 auto;
 }
 
+
 .pic {
   width: 100%;
   height: 100%;
@@ -45,6 +46,7 @@
   transition: transform 0.3s ease;
   box-shadow: 0 14px 26px -8px rgba(48, 0, 111, 0.5);
 }
+
 
 .pic:hover {
   z-index: 20;
